@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+      <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+    <body>
+      <div class="wrapper">
+        <h1>Maddox Family Budget Tracker</h1>
+        <p>Please enter your information below in the easy to use money tracking machine</p>
+        <form class="form" method="post" action="yourpage.html">
+          
+          <input type="text" class="name" placeholder="Amount">
+          <div>
+            <p class="name-help">Please enter amount.</p>
+          </div>
+
+
+          <input type="text" class="desc" placeholder="Description">
+          <div>
+            <p class="fname-help">Please enter your descritipn.</p>
+          </div>
+
+
+          <input type="text" class="cat" placeholder="Category">
+           <div>
+            <p class="email-help">Please pick the correct category.</p>
+          </div>
+
+
+          <input type="submit" class="submit" value="Register">
+
+        </form>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script>
+        $( ".name" ).focus(function(){
+          $( ".name-help" ).slideDown(700);
+        }).blur(function(){
+          $( ".name-help" ).slideUp(700);
+        });
+
+        $(".desc").click(function(){
+          $(".fname-help").slideDown(500);
+        }).blur(function(){
+          $(".fname-help").slideUp(500);
+        });
+
+        $("input.cat").focus(function(){
+          $("p.email-help").slideDown(500);
+        }).blur(function(){
+          $("p.email-help").slideUp(500);
+        });
+      </script>
+    </body>
+</html>
+
+<!--
+form action="https://docs.google.com/forms/d/e/1FAIpQLScUTAxVJpoN-4YTeH4_qB0JCLgO5a3W04dsx5pRqj5jufNuWQ/formResponse
+name="entry.504612064"
+name="entry.1221228045"
+name="entry.2068208374" 
+<input type="hidden" name="fbzx" value="4843328102164732852">
