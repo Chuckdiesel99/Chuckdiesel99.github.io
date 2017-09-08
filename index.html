@@ -10,27 +10,27 @@
       <div class="wrapper">
         <h1>Maddox Family Budget Tracker</h1>
         <p>Please enter your information below in the easy to use money tracking machine</p>
-        <form class="form" method="post" action="yourpage.html">
+        <form id="input-form" class="form" method="post" action="">
           
-          <input type="text" class="name" placeholder="Amount">
+          <input id="input-q1" type="text" class="name" placeholder="Amount">
           <div>
             <p class="name-help">Please enter amount.</p>
           </div>
 
 
-          <input type="text" class="desc" placeholder="Description">
+          <input id="input-q2" type="text" class="desc" placeholder="Description">
           <div>
             <p class="fname-help">Please enter your descritipn.</p>
           </div>
 
 
-          <input type="text" class="cat" placeholder="Category">
+          <input id="input-q3" type="text" class="cat" placeholder="Category">
            <div>
             <p class="email-help">Please pick the correct category.</p>
           </div>
 
 
-          <input type="submit" class="submit" value="Register">
+          <input type="submit" class="submit" value="Submit">
 
         </form>
       </div>
@@ -54,6 +54,23 @@
           $("p.email-help").slideUp(500);
         });
       </script>
+
+      <script>
+          $('#input-form').one('submit',function(){
+              var inputq1 = encodeURIComponent($('#input-q1').val());
+              var inputq2 = encodeURIComponent($('#input-q2').val());
+              var inputq3 = encodeURIComponent($('#input-q3').val());
+              var q1ID = "entry.504612064";
+              var q2ID = "entry.1221228045";
+              var q3ID = "entry.2068208374";
+              var baseURL = 'https://docs.google.com/forms/d/e/1FAIpQLScUTAxVJpoN-4YTeH4_qB0JCLgO5a3W04dsx5pRqj5jufNuWQ/formResponse?';
+              var submitRef = '&submit=4843328102164732852';
+              var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + "&" + q3ID + "=" + inputq3 + submitRef);
+              console.log(submitURL);
+              $(this)[0].action=submitURL;
+          });
+      </script>
+      
     </body>
 </html>
 
