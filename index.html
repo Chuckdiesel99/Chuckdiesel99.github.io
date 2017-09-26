@@ -4,36 +4,65 @@
       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" type="text/css" href="style.css">
+      <!-- <link rel="stylesheet" type="text/css" href="../drop down/css.css"> -->
 
   </head>
     <body>
       <div class="wrapper">
         <h1>Maddox Family Budget Tracker</h1>
         <p>Please enter your information below in the easy to use money tracking machine</p>
-        <form id="input-form" class="form" method="post" action="">
+
+ <!--Form Start -->       
+        <form id="input-form" class="form" method="post" action="" target="_blank">
           
           <input id="input-q1" type="text" class="name" placeholder="Amount">
           <div>
             <p class="name-help">Please enter amount.</p>
           </div>
-
-
+      
           <input id="input-q2" type="text" class="desc" placeholder="Description">
           <div>
             <p class="fname-help">Please enter your descritipn.</p>
           </div>
+          <input id="input-q3" type="hidden">
+<!--Drop down menu start-->      
+          <div class="container">
 
+            <div class="selected-item">
+              <p>You Selected : <span id="category">Empty</span></p>
+            </div>
 
-          <input id="input-q3" type="text" class="cat" placeholder="Category">
-           <div>
-            <p class="email-help">Please pick the correct category.</p>
+            <div class="dropdown">
+              <span class="selLabel">Select Category</span>
+              <input type="hidden" name="cd-dropdown">
+              <ul class="dropdown-list">
+                <li data-value="1">
+                  <span>Groceries</span>
+                </li>
+                <li data-value="2">
+                  <span>Food</span>
+                </li>
+                <li data-value="3">
+                  <span>Chuck</span>
+                </li>
+                <li data-value="4">
+                  <span>Zane</span>
+                </li>
+                <li data-value="5">
+                  <span>Gas</span>
+                </li>
+                <li data-value="6">
+                  <span>Pets</span>
+                </li>
+              </ul>
+            </div>
           </div>
-
-
+<!-- Drop down end-->      
           <input type="submit" class="submit" value="Submit">
-
         </form>
-      </div>
+<!--Form End-->      
+      </div> <!--wrapper div end-->
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
       <script>
         $( ".name" ).focus(function(){
@@ -59,7 +88,7 @@
           $('#input-form').one('submit',function(){
               var inputq1 = encodeURIComponent($('#input-q1').val());
               var inputq2 = encodeURIComponent($('#input-q2').val());
-              var inputq3 = encodeURIComponent($('#input-q3').val());
+              var inputq3 = $('#category').text().replace(/\s/g, "");
               var q1ID = "entry.504612064";
               var q2ID = "entry.1221228045";
               var q3ID = "entry.2068208374";
@@ -70,13 +99,6 @@
               $(this)[0].action=submitURL;
           });
       </script>
-      
+      <script src='js.js'></script>
     </body>
 </html>
-
-<!--
-form action="https://docs.google.com/forms/d/e/1FAIpQLScUTAxVJpoN-4YTeH4_qB0JCLgO5a3W04dsx5pRqj5jufNuWQ/formResponse
-name="entry.504612064"
-name="entry.1221228045"
-name="entry.2068208374" 
-<input type="hidden" name="fbzx" value="4843328102164732852">
