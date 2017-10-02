@@ -15,7 +15,7 @@
  <!--Form Start -->       
         <form id="input-form" class="form" method="post" action="" target="_blank">
           
-          <input id="input-q1" type="text" class="name" placeholder="Amount">
+          <input id="input-q1" type="text" class="name" placeholder="Amount" autocomplete="off">
           <div>
             <p class="name-help">Please enter amount.</p>
           </div>
@@ -29,7 +29,7 @@
           <div class="container">
 
             <div class="selected-item">
-              <p>You Selected : <span id="category">Empty</span></p>
+              <p>You Selected : <span id="category"></span></p>
             </div>
 
             <div class="dropdown">
@@ -92,8 +92,11 @@
               var q1ID = "entry.504612064";
               var q2ID = "entry.1221228045";
               var q3ID = "entry.2068208374";
-              var baseURL = 'https://docs.google.com/forms/d/e/1FAIpQLScUTAxVJpoN-4YTeH4_qB0JCLgO5a3W04dsx5pRqj5jufNuWQ/formResponse?';
-              var submitRef = '&submit=4843328102164732852';
+              // Search for "formResponse" to get the form URL in live form code (see below)
+              var baseURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfKcYGE8cyJryKXNQ58zgLZTyIiEQ8ZXCyJIdnyy7X0zbM5KA/formResponse?';
+              // Search for this in live form code...
+              // <input type="hidden" name="fbzx" value="xxxxxxxxxxxxx">
+              var submitRef = '&submit=-91782152246917343';
               var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + "&" + q3ID + "=" + inputq3 + submitRef);
               console.log(submitURL);
               $(this)[0].action=submitURL;
