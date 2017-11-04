@@ -9,7 +9,7 @@
   </head>
     <body>
       <div class="wrapper">
-        <h1>Maddox Family Budget Tracker</h1>
+        <h1>Maddox reset Family Budget Tracker</h1>
         <p>Please enter your information below in the easy to use money tracking machine</p>
 
  <!--Form Start -->       
@@ -100,6 +100,7 @@
               var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + "&" + q3ID + "=" + inputq3 + submitRef);
               console.log(submitURL);
               $(this)[0].action=submitURL;
+              $('#input-form')[0].reset();
           });
       </script>
       <script src='js.js'></script>
