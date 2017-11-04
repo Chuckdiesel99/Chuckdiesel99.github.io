@@ -9,11 +9,11 @@
   </head>
     <body>
       <div class="wrapper">
-        <h1>Maddox reset2 Family Budget Tracker</h1>
+        <h1>Maddox reset3 Family Budget Tracker</h1>
         <p>Please enter your information below in the easy to use money tracking machine</p>
 
  <!--Form Start -->       
-        <form id="input-form" class="form" method="post" action="" target="_blank">
+        <form id="input-form" class="form" method="post" action="" target="_blank" onsubmit="setTimeout(function(){window.location.reload();},10)">
           
           <input id="input-q1" type="text" class="name" placeholder="Amount" autocomplete="off">
           <div>
@@ -102,9 +102,7 @@
               $(this)[0].action=submitURL;
           });
       </script>
-      <script>
-      		onsubmit="setTimeout(function(){window.location.reload();},10)"
-      </script>
+      		
       <script src='js.js'></script>
     </body>
 </html>
